@@ -42,9 +42,21 @@ const person = {
     eat() { },
     sleep() { },
     code() { console.log(person.name); }
-}
+};
 // person.code();
 // person.name='Faizan';
 // console.log(person.name);
 // person['name'] = 'Rehan';
 // console.log(person.name);
+
+// The this keyword
+
+const fruits = {
+    name: 'apple',
+    vegetable() { console.log(this) }
+};
+// fruits.vegetable();
+
+const vegetable = fruits.vegetable;
+// console.log(vegetable);
+// vegetable();
