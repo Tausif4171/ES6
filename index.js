@@ -85,13 +85,13 @@ const square = (number) => {
 // console.log(square(5));
 
 const jobs = [
-    {id: 1, isActive: true},
-    {id: 2, isActive: true},
-    {id: 3, isActive: false},
+    { id: 1, isActive: true },
+    { id: 2, isActive: true },
+    { id: 3, isActive: false },
 ];
 // console.log(jobs[0]);
 
-const activeJobs = jobs.filter( (job) =>{
+const activeJobs = jobs.filter((job) => {
     return job.isActive;
 });
 // console.log(activeJobs);
@@ -104,14 +104,25 @@ const test = {
     //     setTimeout(function(){
     //         console.log('this', self)
     //     },1000);
-       
+
     // }
     code() {
         // var self = this;
-        setTimeout(() =>{
+        setTimeout(() => {
             console.log('this', this)
-        },1000);
-       
+        }, 1000);
+
     }
 }
 // test.code();
+
+// Array.map Method
+
+const colors = ['red', 'green', 'blue'];
+
+const items = colors.map((color) => {
+    // return '<li>' + color + '</li>';
+    return `<li>${color}</li>`;
+});
+
+console.log(items);
