@@ -76,3 +76,22 @@ const mnc = {
 const abc = mnc.locations.bind(mnc);
 // console.log(abc);
 // abc();
+
+// Arrow functions
+
+const square = (number) => {
+    return number + number;
+}
+// console.log(square(5));
+
+const jobs = [
+    {id: 1, isActive: true},
+    {id: 2, isActive: true},
+    {id: 3, isActive: false},
+];
+// console.log(jobs[0]);
+
+const activeJobs = jobs.filter( (job) =>{
+    return job.isActive;
+});
+// console.log(activeJobs);
