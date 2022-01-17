@@ -49,6 +49,8 @@ const person = {
 // person['name'] = 'Rehan';
 // console.log(person.name);
 
+// ****************************************************************
+
 // The this keyword
 
 const fruits = {
@@ -60,3 +62,17 @@ const fruits = {
 const vegetable = fruits.vegetable;
 // console.log(vegetable);
 // vegetable();
+
+// ****************************************************************
+
+// Binding this
+
+const mnc = {
+    name: 'facebook',
+    locations() { console.log(this) }
+};
+
+// mnc.locations();
+const abc = mnc.locations.bind(mnc);
+// console.log(abc);
+// abc();
