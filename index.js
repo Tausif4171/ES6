@@ -95,3 +95,23 @@ const activeJobs = jobs.filter( (job) =>{
     return job.isActive;
 });
 // console.log(activeJobs);
+
+// Arrow functions and this => Arrow functions don't rebind the this keyword
+
+const test = {
+    // code() {
+    //     var self = this;
+    //     setTimeout(function(){
+    //         console.log('this', self)
+    //     },1000);
+       
+    // }
+    code() {
+        // var self = this;
+        setTimeout(() =>{
+            console.log('this', this)
+        },1000);
+       
+    }
+}
+// test.code();
