@@ -77,6 +77,8 @@ const abc = mnc.locations.bind(mnc);
 // console.log(abc);
 // abc();
 
+// ****************************************************************
+
 // Arrow functions
 
 const square = (number) => {
@@ -95,6 +97,8 @@ const activeJobs = jobs.filter((job) => {
     return job.isActive;
 });
 // console.log(activeJobs);
+
+// ****************************************************************
 
 // Arrow functions and this => Arrow functions don't rebind the this keyword
 
@@ -116,6 +120,8 @@ const test = {
 }
 // test.code();
 
+// ****************************************************************
+
 // Array.map Method
 
 const colors = ['red', 'green', 'blue'];
@@ -125,4 +131,27 @@ const items = colors.map((color) => {
     return `<li>${color}</li>`;
 });
 
-console.log(items);
+// console.log(items);
+
+// ****************************************************************
+
+// Object Destructuring
+
+const address = {
+    street: 'nallasopara',
+    city: 'Mumbai',
+    country: 'India'
+}
+
+// Not do this
+// const Street = address.street;
+// const City = address.city;
+// const Country = address.country;
+// console.log(Street);
+
+// Do like this, this is called Object Destructuring
+const { street, city, country } = address;
+const { street: st } = address;
+// console.log(st);
+
+// ****************************************************************
