@@ -155,3 +155,24 @@ const { street: st } = address;
 // console.log(st);
 
 // ****************************************************************
+
+// Spread Operator
+// Array
+const first = [1,2,3];
+const second = [5,6,7];
+
+const combined = first.concat(second);
+// console.log(combined);
+const combined1 = [...first, 4, ...second, 8];
+// console.log(combined1);
+const clone = [...first];
+// console.log(first);
+// console.log(clone);
+
+//Objects
+const third = {name: 'Tausif'};
+const fourth = {age: 21};
+const fifth = {favourite_color: 'black-blue'};
+
+const combined2 = {...third, ...fourth, ...fifth, hobbies: 'cricket'};
+console.log(combined2);
