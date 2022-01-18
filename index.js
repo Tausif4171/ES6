@@ -175,4 +175,25 @@ const fourth = {age: 21};
 const fifth = {favourite_color: 'black-blue'};
 
 const combined2 = {...third, ...fourth, ...fifth, hobbies: 'cricket'};
-console.log(combined2);
+// console.log(combined2);
+
+// ****************************************************************
+
+// Classes
+
+class Person{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    code() {
+        console.log("code")
+    } 
+}
+
+const data = new Person('Tausif', 21);
+// console.log(data.name);
+// console.log(data.age);
+// console.log(data.code());
+
+// ****************************************************************
