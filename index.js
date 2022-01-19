@@ -158,8 +158,8 @@ const { street: st } = address;
 
 // Spread Operator
 // Array
-const first = [1,2,3];
-const second = [5,6,7];
+const first = [1, 2, 3];
+const second = [5, 6, 7];
 
 const combined = first.concat(second);
 // console.log(combined);
@@ -170,25 +170,25 @@ const clone = [...first];
 // console.log(clone);
 
 //Objects
-const third = {name: 'Tausif'};
-const fourth = {age: 21};
-const fifth = {favourite_color: 'black-blue'};
+const third = { name: 'Tausif' };
+const fourth = { age: 21 };
+const fifth = { favourite_color: 'black-blue' };
 
-const combined2 = {...third, ...fourth, ...fifth, hobbies: 'cricket'};
+const combined2 = { ...third, ...fourth, ...fifth, hobbies: 'cricket' };
 // console.log(combined2);
 
 // ****************************************************************
 
 // Classes
 
-class Person{
-    constructor(name,age){
+class Person {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
     code() {
         console.log("code")
-    } 
+    }
 }
 
 const data = new Person('Tausif', 21);
@@ -197,3 +197,29 @@ const data = new Person('Tausif', 21);
 // console.log(data.code());
 
 // ****************************************************************
+
+// Inheritance
+
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    code() {
+        console.log('code');
+    }
+}
+// const user = new User('Tausif');
+// console.log(user.name);
+
+class Teacher extends User {
+    constructor(name, age, subject) {
+        super(name, age);
+        this.subject = subject;
+    }
+    teach() {
+        console.log('teach');
+    }
+}
+const teacher = new Teacher('Sunny', 26, 'Javascript');
+// console.log(teacher.name, teacher.age);
